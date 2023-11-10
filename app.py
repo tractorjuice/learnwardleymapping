@@ -20,14 +20,16 @@ MODEL = "gpt-3.5-turbo-16k-0613"
 if "session_id" not in st.session_state:
     st.session_state.session_id = str(uuid.uuid4())
     
-st.set_page_config(page_title="Learn Wardley Mapping Bot")
+st.set_page_config(page_title="Learn Wardley Mapping")
 st.sidebar.title("Learn Wardley Mapping")
-st.sidebar.divider()
+st.sidebar.image("./logo.png")
 st.sidebar.markdown("Developed by Mark Craddock](https://twitter.com/mcraddock)", unsafe_allow_html=True)
-st.sidebar.markdown("Current Version: 1.0.0")
-st.sidebar.markdown("Using gpt-3.5-turbo-16k-0613 API")
-st.sidebar.markdown(st.session_state.session_id)
+st.sidebar.markdown("Current Version: 0.0.3")
 st.sidebar.divider()
+#st.sidebar.markdown("Using gpt-4-1106-preview API")
+#st.sidebar.markdown(st.session_state.session_id)
+#st.sidebar.divider()
+
 # Check if the user has provided an API key, otherwise default to the secret
 user_openai_api_key = st.sidebar.text_input("Enter your OpenAI API Key:", placeholder="sk-...", type="password")
 
